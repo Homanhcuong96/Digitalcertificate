@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Hi, {{ current_user.username }}!</h1>
+    {% if owner_cerfiticate in certificate_list %}
+      <h1>{{owner_cerfiticate}}</h1>
+      <form method="get" action='{{"/download/" + owner_cerfiticate}}'>
+         <button type="submit">Download!</button>
+      </form>
+      <form method="POST" action='{{"/delete/" + owner_cerfiticate}}'>
+          <input type="hidden" name="_method" value="DELETE" />
+          <button type="submit">Delete!</button>
+      </form>
+    {% else %}
+      <h1>Certificate not found</h1>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,66 @@
+{
+  "attributes": [
+    {
+      "oid": "1.3.6.1.5.5.7.1.14",
+      "datatype": "integer",
+      "value_range": [1, 2, 8, 10]
+    },
+    {
+      "oid": "1.3.6.1.5.5.7.1.15",
+      "datatype": "integer",
+      "value_range": [1, 2, 8, 10]
+    },
+    {
+      "oid": "1.3.6.1.5.5.7.1.14",
+      "datatype": "integer",
+      "value_range": [1, 2, 8, 10]
+    },
+    {
+      "oid": "1.3.6.1.5.5.7.1.15",
+      "datatype": "integer",
+      "value_range": [1, 2, 8, 10]
+    }
+
+  ],
+  "sources": [
+    {
+      "filename": "test.txt",
+      "actions": [
+        {
+          "type": "read",
+          "level": 2
+        },
+        {
+          "type": "delete",
+          "level":10
+        }
+      ]
+    },
+    {
+      "filename": "test2.txt",
+      "actions": [
+        {
+          "type": "read",
+          "level": 2
+        },
+        {
+          "type": "write",
+          "level":8
+        }
+      ]
+    },
+    {
+      "filename": "ngoc_xinh_gai.txt",
+      "actions": [
+        { 
+          "type": "read",
+          "level": 2
+        },
+        {
+          "type": "delete",
+          "level":10
+        }
+      ]
+    }
+  ]
+}

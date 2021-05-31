@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Hi, {{ current_user.username }}!</h1>
+    <table>
+      {% for file in file_list%}
+        <TR>
+          <TD><a href="{{ url_for('sources', filename=file) }}">{{file}}</a></TD>>
+        </TR>
+      {% endfor %}
+    </table>
+{% endblock %}
